@@ -42,12 +42,12 @@ export default function LoginWith2fa() {
     <div className="flex h-screen items-center lg:justify-center bg-gradient-to-b from-[#2D9E47] to-[#2D9E47]/60 ">
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col gap-5 w-full mx-4 lg:mx-none lg:w-[500px] p-10 bg-white rounded-lg shadow-lg"
+        className="flex flex-col gap-5 w-full mx-4 lg:mx-none lg:w-[500px] p-4 lg:p-10 bg-white rounded-lg shadow-lg"
       >
-        <p className="text-center">
+        <p className="text-center flex w-[275px] mx-auto">
           Enter the pin code from your SypherGate 2FA app
         </p>
-        <div className="flex gap-4">
+        <div className="flex gap-1 lg:gap-4">
           {[...Array(6)].map((_, i) => (
             <input
               key={i}
