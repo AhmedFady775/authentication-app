@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import ReactLoading from "react-loading";
 
 export default function ProtectedRoute({ children }) {
-  const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+  const userInfo = localStorage.getItem("userInfo");
   const navigate = useNavigate();
 
   useEffect(() => {
