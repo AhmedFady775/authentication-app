@@ -2,6 +2,7 @@ import * as React from "react";
 import ReactLoading from "react-loading";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import logo_2FA from "../assets/2FA.png";
 
 export default function LoginWith2fa() {
   const [loading, setLoading] = React.useState(false);
@@ -38,13 +39,13 @@ export default function LoginWith2fa() {
   };
 
   return (
-    <div className="flex h-screen items-center lg:justify-center bg-gradient-to-b from-[#5F58FF] to-[#5F58FF]/60 ">
+    <div className="flex h-screen items-center lg:justify-center bg-gradient-to-b from-[#2D9E47] to-[#2D9E47]/60 ">
       <form
         onSubmit={handleSubmit}
         className="flex flex-col gap-5 w-full mx-4 lg:mx-none lg:w-[500px] p-10 bg-white rounded-lg shadow-lg"
       >
         <p className="text-center">
-          Enter the pin code from your Authenticator App
+          Enter the pin code from your SypherGate 2FA app
         </p>
         <div className="flex gap-4">
           {[...Array(6)].map((_, i) => (
@@ -69,14 +70,14 @@ export default function LoginWith2fa() {
                 }
               }}
               value={code[i]}
-              className={`w-full rounded-md border px-4 py-2 focus:border-[#5F58FF] focus:ring-[#5F58FF] focus:outline-[#5F58FF] flex items-center justify-center text-center`}
+              className={`w-full rounded-md border px-4 py-2 focus:border-[#2D9E47] focus:ring-[#2D9E47] focus:outline-[#2D9E47] flex items-center justify-center text-center`}
             />
           ))}
         </div>
         {loading ? (
           <button
             disabled
-            className="rounded cursor-not-allowed flex items-center justify-center bg-[#5F58FF] px-8 py-2 text-white transition h-10"
+            className="rounded cursor-not-allowed flex items-center justify-center bg-[#2D9E47] px-8 py-2 text-white transition h-10"
           >
             <ReactLoading
               type="bubbles"
@@ -88,11 +89,15 @@ export default function LoginWith2fa() {
         ) : (
           <button
             type="submit"
-            className="rounded bg-[#5F58FF] px-8 py-2 text-white transition lg:hover:bg-[#5F58FF]/80 h-10"
+            className="rounded bg-[#2D9E47] px-8 py-2 text-white transition lg:hover:bg-[#2D9E47]/80 h-10"
           >
             Enter Pin
           </button>
         )}
+        <p className="text-sm flex items-center justify-center gap-4">
+          Powered by
+          <img src={logo_2FA} className="w-10 h-10 object-contain " />
+        </p>
       </form>
     </div>
   );

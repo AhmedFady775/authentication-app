@@ -32,7 +32,6 @@ export default function LoginForm() {
       const data = await res.json();
       if (data.status === "success") {
         setLoading(false);
-        toast.success("logged in");
         localStorage.setItem("userInfo", values.email);
         navigate("/2fa");
       } else {
@@ -73,14 +72,14 @@ export default function LoginForm() {
       {loading ? (
         <button
           disabled
-          className="rounded cursor-not-allowed flex items-center justify-center bg-[#5F58FF] px-8 py-2 text-white transition h-10"
+          className="rounded cursor-not-allowed flex items-center justify-center bg-[#2D9E47] px-8 py-2 text-white transition h-10"
         >
           <ReactLoading type="bubbles" color="#ffffff" height={25} width={25} />
         </button>
       ) : (
         <button
           type="submit"
-          className="rounded bg-[#5F58FF] px-8 py-2 text-white transition lg:hover:bg-[#5F58FF]/80 h-10"
+          className="rounded bg-[#2D9E47] px-8 py-2 text-white transition lg:hover:bg-[#2D9E47]/80 h-10"
         >
           Login
         </button>

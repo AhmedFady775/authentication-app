@@ -9,11 +9,11 @@ export default function Home() {
       <div className="flex flex-col gap-10 items-center">
         <img src={Logo} className="w-48 h-48 object-contain" />
         <div className="flex flex-col gap-2 lg:gap-4 items-center">
-          <p className="text-[#5F58FF] font-bold lg:text-5xl text-3xl">
+          <p className="text-[#2D9E47] font-bold lg:text-5xl text-3xl">
             Welcome to Pied Piper
           </p>
           <p className="lg:text-xl">Enjoy our compression services.</p>
-          <p className="absolute bottom-20 text-[#5F58FF] shadow p-4 rounded-md underline">
+          <p className="absolute bottom-20 text-[#2D9E47] shadow p-4 rounded-md underline">
             You are now logged in
           </p>
         </div>
@@ -22,7 +22,7 @@ export default function Home() {
             localStorage.clear("userInfo");
             navigate("/");
           }}
-          className="rounded border-[#5F58FF] bg-[#5F58FF] px-8 py-2 text-sm text-white transition hover:bg-[#5F58FF]/80"
+          className="rounded border-[#2D9E47] bg-[#2D9E47] px-8 py-2 text-sm text-white transition hover:bg-[#2D9E47]/80"
         >
           logout
         </button>
