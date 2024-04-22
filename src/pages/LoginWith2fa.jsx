@@ -96,7 +96,7 @@ export default function LoginWith2fa() {
         )}
         <p className="text-sm flex items-center justify-center gap-4">
           Powered by
-          <img src={logo_2FA} className="w-10 h-10 object-contain " />
+          <img src={logo_2FA} className="w-6 h-6 object-contain " />
         </p>
       </form>
     </div>
