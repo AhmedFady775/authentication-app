@@ -52,7 +52,7 @@ export default function LoginWith2fa() {
             <input
               key={i}
               name="code"
-              type="text"
+              type="number"
               accept="number"
               onChange={(e) => {
                 const value = e.target.value;
